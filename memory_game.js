@@ -1,5 +1,18 @@
 var memoryCard = document.getElementsByClassName("memory-card");
 
+function newGame(){
+    var button = document.getElementById('play');
+
+    button.addEventListener('click', slideNewGameScreenUp)
+}
+
+newGame();
+
+function slideNewGameScreenUp(){
+    var body = document.getElementById('body');
+    body.style.transform = "translateY(-50%)";
+}
+
 function matchUp(){ 
     var images = randomize();
         
