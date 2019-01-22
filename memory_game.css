@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.body{
+    overflow: hidden;
+}
+
+.new-game {
+    height: 100vh;
+    background: rgb(43, 131, 90);
+    position: relative;
+    font-family: 'Cinzel', serif;
+}
+
+.title{
+    font-weight: bold;
+    color: maroon;
+    text-align: center;
+}
+
+.wow{
+    font-size: 80px;
+    line-height: 50px;
+    padding-top: 7%;
+    text-shadow: 2px 2px 4px black;
+    font-weight: bolder;
+}
+
+.such {
+    font-size: 160px;
+    text-shadow: 4px 4px 4px black;
+
+}
+
+.troll{
+    font-size: 40px;
+    line-height: 50%;
+}
+
+.play-button{
+    font-size: 70px;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 2px 2px 4px maroon;
+    color: white;
+    padding: 15px 32px;
+    background-color: maroon;
+    letter-spacing: 10px;
+    border-radius: 20px;
+    position: absolute;
+    margin: auto;
+    bottom: 17%;
+    left: calc(50% - 265px);
+}
+
+.play-button:hover {
+    background-color: rgb(209, 186, 158);
+    color: black;
+    cursor: pointer;
+}
+.game-page{
+    height: 100vh;
+    background: rgb(226, 200, 168);
+    display: flex;
+}
+
+.replay.access{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(179, 178, 178, 0.452);
+    border-radius: 20px;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.replay.access a{
+    font-size: 120px;
+    font-family: 'Cinzel', serif;
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+}
+
+.play-area:hover .replay.access a{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.play-area:hover .replay.access{
+    visibility: visible;
+}
+
+.replay.access a:hover{
+    color: maroon;
+}
+
+.sidebar{
+    width: 35%;
+    height: 800px;
+    display: flex;
+    position: relative;
+}
+
+#counter{
+    font-size: 130px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: maroon;
+    margin: auto;
+}
+
+#final{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+    top: 50%;
+    margin-top: -280px;
+    z-index: 10;
+    border-radius: 20px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.score{
+    font-family: 'Cinzel', serif;
+    margin-top: 25%;
+    font-size: 50px;
+}
+
+.play-area{
+    width: 800px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-right: 0;
+    perspective: 1000px;
+    position: relative;
+    
+}
+
+.memory-card{
+    height: calc(25% - 10px);
+    width: calc(20% - 10px);
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+.memory-card:hover{
+    transform: scale(1.05);
+}
+
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
+
+.front,
+.back{
+    position: absolute;
+    max-height: 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    
+}
+
+.back{
+    transform: rotateY(180deg); 
+    background: black;    
+}
+
+.front{
+    background: rgb(43, 131, 90);
+}
+
+img{
+    width: 50px;
+}
+
+footer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
